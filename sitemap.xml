@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>/ProgEdu/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/help/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/related-projects/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/license/</loc>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/contributing.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/documentation.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/getting-started.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/guides.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/help.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/introduction.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/license.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/ProgEdu/related-projects.html</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
