@@ -10,23 +10,23 @@
       <span class="h5">Deadline</span>
       <p style="margin: 10px;">{{assignment.deadline}}</p>
     </div>
-    <div id="inline">
-      <p class="ovol NB">
+    <div id="inline" class='col-md-12'>
+      <span class="ovol NB">
         Not Build
-      </p>
-      <p class="ovol CPF">
+      </span>
+      <span class="ovol CPF">
         Compile Failure
-      </p>
-      <p class="ovol CSF">
+      </span>
+      <span class="ovol CSF">
         Checkstyle Failure
-      </p>
+      </span>
       <!-- <p class="ovol plagirism" style="padding: 5px 10px;"><fmt:message key="dashboard_p_plagiarism"/></p> -->
-      <p class="ovol UTF">
+      <span class="ovol UTF">
         Unit Test Failure
-      </p>
-      <p class="ovol BS">
+      </span>
+      <span class="ovol BS">
         Build Success
-      </p>
+      </span>
     </div>
     <div class="card-body">
       <div class='row '>
@@ -41,7 +41,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let commit of commits" (click)='updateFeedback(commit.number)'>
+              <tr *ngFor="let commit of commits" style="cursor: pointer" (click)='updateFeedback(commit.number)'>
                 <td>{{commit.number}} </td>
                 <td>
                   <p class="circle {{commit.status || uppercase}}"></p>
@@ -71,7 +71,7 @@
     <div class="card-footer">
       <span class="h4"><a href="#">Feedback Information (#1)</a></span>
       <div id="container">
-        <pre style="overflow: auto;">{{feedback}}</pre>
+        <pre style="overflow: auto;font-size: 1rem">{{feedback}}</pre>
       </div>
     </div>
   </div>
