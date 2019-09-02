@@ -94,7 +94,7 @@ public class AssignmentService {
   }
 
   /**
-   * 
+   *
    * @param assignmentName abc
    * @param readMe         abc
    * @param assignmentType abc
@@ -144,10 +144,10 @@ public class AssignmentService {
     assignment.createTestCase(testDirectory);
     zipHandler.zipTestFolder(testDirectory);
     testZipChecksum = zipHandler.getChecksum();
-    testZipUrl = zipHandler.serverIp + "/ProgEdu/webapi/assignment/getTestFile?filePath="
+    testZipUrl = zipHandler.serverIp + applicationConfig.getBaseurl() + "/webapi/assignment/getTestFile?filePath="
         + testDirectory + ".zip";
     // zipHandler.setUrlForJenkinsDownloadTestFile(zipHandler.serverIp
-    // + "/ProgEdu/webapi/jenkins/getTestFile?filePath=" + testDirectory + ".zip");
+    // + applicationConfig.getBaseurl() + "/webapi/jenkins/getTestFile?filePath=" + testDirectory + ".zip");
 
     // 5. Add .gitkeep if folder is empty.
     tomcatService.findEmptyFolder(cloneDirectoryPath);
@@ -254,7 +254,7 @@ public class AssignmentService {
 
   /**
    * Add a project to database
-   * 
+   *
    * @param name        Project name
    * @param deadline    Project deadline
    * @param readMe      Project readme
@@ -280,7 +280,7 @@ public class AssignmentService {
 
   /**
    * Add auid to database
-   * 
+   *
    * @param username       username
    * @param assignmentName assignment name
    */
@@ -293,7 +293,7 @@ public class AssignmentService {
 
   /**
    * delete projects
-   * 
+   *
    * @param name project name
    * @return response
    */
@@ -345,7 +345,7 @@ public class AssignmentService {
 
   /**
    * edit projects
-   * 
+   *
    * @param assignmentName project name
    * @return response
    */
@@ -357,7 +357,7 @@ public class AssignmentService {
       @FormDataParam("releaseTime") Date releaseTime, @FormDataParam("deadline") Date deadline,
       @FormDataParam("readMe") String readMe, @FormDataParam("file") InputStream file,
       @FormDataParam("file") FormDataContentDisposition fileDetail) {
-    
+
     int id = dbManager.getAssignmentIdByName(assignmentName);
     if (file == null) {
       dbManager.editAssignment(deadline, releaseTime, readMe, id);
@@ -387,7 +387,7 @@ public class AssignmentService {
 
   /**
    * get project checksum
-   * 
+   *
    * @param assignmentName assignment name
    * @return checksum
    */
@@ -406,7 +406,7 @@ public class AssignmentService {
 
   /**
    * get project checksum
-   * 
+   *
    * @param assignmentName assignment name
    * @return checksum
    */
@@ -424,7 +424,7 @@ public class AssignmentService {
   }
 
   /**
-   * 
+   *
    * @return AllAssignments
    */
   @GET
@@ -439,7 +439,7 @@ public class AssignmentService {
 
   /**
    * get test folder
-   * 
+   *
    * @param filePath folder directory
    * @return zip file
    */
@@ -455,7 +455,7 @@ public class AssignmentService {
 
   /**
    * delete Assignment from Database by name
-   * 
+   *
    */
   public void deleteAssignmentDatabase(String name) {
 

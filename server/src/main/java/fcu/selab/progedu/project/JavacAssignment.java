@@ -53,7 +53,7 @@ public class JavacAssignment extends AssignmentType {
           .getResource("/jenkins/" + getJenkinsJobConfigSample()).getPath();
 
       ApplicationConfig applicationConfig = ApplicationConfig.getInstance();
-      String progEduApiUrl = applicationConfig.getTomcatServerIp() + "/ProgEdu/webapi";
+      String progEduApiUrl = applicationConfig.getTomcatServerIp() + applicationConfig.getBaseurl() + "/webapi";
       String projectUrl = gitlabConfig.getGitlabHostUrl() + "/" + username + "/" + projectName
           + ".git";
       String updateDbUrl = progEduApiUrl + "/commits/update";
@@ -113,7 +113,7 @@ public class JavacAssignment extends AssignmentType {
 
   /**
    * Search all Java file in this assignment
-   * 
+   *
    * @param assignmentPath assignmentPath
    */
   public String searchJavaFile(String assignmentPath) {
@@ -133,7 +133,7 @@ public class JavacAssignment extends AssignmentType {
   }
 
   /**
-   * 
+   *
    * @param fileList fileList
    * @param command command
    */

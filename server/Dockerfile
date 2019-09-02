@@ -6,7 +6,11 @@ WORKDIR /workdir
 
 COPY . .
 
-RUN mvn -T 1C clean package -DskipTests
+ARG WEB_API_BASEURL=
+ENV WEB_API_BASEURL=$WEB_API_BASEURL
+
+RUN envsubst < src/environments/environment.docker.ts > src/environments/environment.prod.ts && \
+    mvn -T 1C clean package -DskipTests
 
 FROM tomcat
 
@@ -22,4 +26,3 @@ RUN if [ ${DEBUG} = true ]; then \
     ;fi
 
 COPY --from=builder /workdir/target/ProgEdu.war /usr/local/tomcat/webapps/ROOT.war
-
