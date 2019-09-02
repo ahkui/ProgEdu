@@ -22,9 +22,9 @@ const editAssignmentOptions = ({
 })
 export class AssignmentManagementService {
 
-  ALL_ASSIGNMENT_API = environment.SERVER_URL + '/ProgEdu/webapi/assignment/getAllAssignments';
-  DELETE_ASSIGNMENT_API = environment.SERVER_URL + '/ProgEdu/webapi/assignment/delete';
-  EDIT_ASSIGNMENT_API = environment.SERVER_URL + '/ProgEdu/webapi/assignment/edit';
+  ALL_ASSIGNMENT_API = environment.SERVER_URL + '/webapi/assignment/getAllAssignments';
+  DELETE_ASSIGNMENT_API = environment.SERVER_URL + '/webapi/assignment/delete';
+  EDIT_ASSIGNMENT_API = environment.SERVER_URL + '/webapi/assignment/edit';
   constructor(private http: HttpClient) { }
   getAllAssignments(): Observable<any> {
     return this.http.get<any>(this.ALL_ASSIGNMENT_API);

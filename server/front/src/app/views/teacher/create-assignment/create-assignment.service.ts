@@ -12,7 +12,7 @@ const createAssigmentOptions = ({
   providedIn: 'root'
 })
 export class CreateAssignmentService {
-  CREATE_ASSIGNMENT_API = environment.SERVER_URL + '/ProgEdu/webapi/assignment/create';
+  CREATE_ASSIGNMENT_API = environment.SERVER_URL + '/webapi/assignment/create';
   constructor(private http: HttpClient) { }
 
   createAssignment(assigememt: FormGroup): Observable<any> {

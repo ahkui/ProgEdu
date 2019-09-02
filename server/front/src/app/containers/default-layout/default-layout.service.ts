@@ -12,8 +12,8 @@ const modifySecretOptions = ({
   providedIn: 'root'
 })
 export class DefaultLayoutService {
-  ALL_COMMIT_API = environment.SERVER_URL + '/ProgEdu/webapi/commits/allUsers';
-  MODIFY_API = environment.SERVER_URL + '/ProgEdu/webapi/user/updatePassword';
+  ALL_COMMIT_API = environment.SERVER_URL + '/webapi/commits/allUsers';
+  MODIFY_API = environment.SERVER_URL + '/webapi/user/updatePassword';
   constructor(private http: HttpClient) { }
 
   getNavData(): Observable<any> {

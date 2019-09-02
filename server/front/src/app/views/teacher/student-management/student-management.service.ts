@@ -22,9 +22,9 @@ const addMutipleStudentOptions = ({
 
 
 export class StudentManagementService {
-  GET_USERS_API = environment.SERVER_URL + '/ProgEdu/webapi/user/getUsers';
-  ADD_ONE_USER_API = environment.SERVER_URL + '/ProgEdu/webapi/user/new';
-  ADD_MUTIPLE_USER_API = environment.SERVER_URL + '/ProgEdu/webapi/user/upload';
+  GET_USERS_API = environment.SERVER_URL + '/webapi/user/getUsers';
+  ADD_ONE_USER_API = environment.SERVER_URL + '/webapi/user/new';
+  ADD_MUTIPLE_USER_API = environment.SERVER_URL + '/webapi/user/upload';
   constructor(private http: HttpClient) { }
 
   getAllUserData(): Observable<any> {

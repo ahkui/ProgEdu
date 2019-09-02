@@ -7,10 +7,10 @@ import { environment } from '../../../../environments/environment';
   providedIn: 'root'
 })
 export class ProjectChoosedService {
-  COMMIT_RECORD_DETAIL = environment.SERVER_URL + '/ProgEdu/webapi/commits/commitRecords';
-  ASSIGNMENT_API = environment.SERVER_URL + '/ProgEdu/webapi/assignment/getAssignment';
-  GITLAB_URL_API = environment.SERVER_URL + '/ProgEdu/webapi/commits/gitLab';
-  FEEDBACK_API = environment.SERVER_URL + '/ProgEdu/webapi/commits/feedback';
+  COMMIT_RECORD_DETAIL = environment.SERVER_URL + '/webapi/commits/commitRecords';
+  ASSIGNMENT_API = environment.SERVER_URL + '/webapi/assignment/getAssignment';
+  GITLAB_URL_API = environment.SERVER_URL + '/webapi/commits/gitLab';
+  FEEDBACK_API = environment.SERVER_URL + '/webapi/commits/feedback';
 
   constructor(private http: HttpClient) { }
 

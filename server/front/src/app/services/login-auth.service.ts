@@ -15,8 +15,8 @@ const options = ({
 })
 export class LoginAuthService {
 
-  LOGIN_URL: string = environment.SERVER_URL + '/ProgEdu/LoginAuth';
-  AUTH_URL: string = environment.SERVER_URL + '/ProgEdu/webapi/auth/login';
+  LOGIN_URL: string = environment.SERVER_URL + '/LoginAuth';
+  AUTH_URL: string = environment.SERVER_URL + '/webapi/auth/login';
   constructor(private http: HttpClient, private jwtService: JwtService) { }
   // 是否登录
   public Login(username, password): Observable<any> {

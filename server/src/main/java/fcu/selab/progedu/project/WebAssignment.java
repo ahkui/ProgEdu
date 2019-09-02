@@ -50,7 +50,8 @@ public class WebAssignment extends AssignmentType {
           .getResource("/jenkins/" + getJenkinsJobConfigSample()).getPath();
 
       ApplicationConfig applicationConfig = ApplicationConfig.getInstance();
-      String progEduApiUrl = applicationConfig.getTomcatServerIp() + applicationConfig.getBaseurl() + "/webapi";
+      String progEduApiUrl = applicationConfig.getTomcatServerIp()
+          + applicationConfig.getBaseurl() + "/webapi";
       String projectUrl = gitlabConfig.getGitlabHostUrl() + "/" + username + "/" + projectName
           + ".git";
       String updateDbUrl = progEduApiUrl + "/commits/update";

@@ -7,8 +7,8 @@ import { environment } from '../../../../environments/environment';
   providedIn: 'root'
 })
 export class StudashboardService {
-  ALL_COMMIT_API = environment.SERVER_URL + '/ProgEdu/webapi/commits/oneUser';
-  ALL_ASSIGNMENT_API = environment.SERVER_URL + '/ProgEdu/webapi/assignment/getAllAssignments';
+  ALL_COMMIT_API = environment.SERVER_URL + '/webapi/commits/oneUser';
+  ALL_ASSIGNMENT_API = environment.SERVER_URL + '/webapi/assignment/getAllAssignments';
   constructor(private http: HttpClient) { }
 
   getStudentCommitRecord(username: string): Observable<any> {
