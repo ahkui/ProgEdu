@@ -9,8 +9,13 @@ COPY . .
 ARG WEB_API_BASEURL=
 ENV WEB_API_BASEURL=$WEB_API_BASEURL
 
-RUN envsubst < front/src/environments/environment.docker.ts > front/src/environments/environment.prod.ts && \
-    mvn -T 1C clean package -DskipTests
+RUN apt-get update \
+    && apt-get -y install gettext-base \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && envsubst < front/src/environments/environment.docker.ts > front/src/environments/environment.prod.ts
+
+RUN mvn -T 1C clean package -DskipTests
 
 FROM tomcat
 
