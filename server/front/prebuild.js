@@ -1,3 +1,17 @@
 const fs = require('fs');
-if (fs.existsSync('src\\environments\\environment.ts') == false)
-  fs.copyFileSync('src\\environments\\environment.prod.ts', 'src\\environments\\environment.ts');
+const path = require('path');
+
+if (fs.existsSync(path.join(
+  'src',
+  'environments',
+  'environment.ts'
+)) == false)
+  fs.copyFileSync(path.join(
+    'src',
+    'environments',
+    'environment.prod.ts'
+  ), path.join(
+    'src',
+    'environments',
+    'environment.ts'
+  ));
