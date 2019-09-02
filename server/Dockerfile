@@ -6,12 +6,7 @@ WORKDIR /workdir
 
 COPY . .
 
-RUN cd src/main/resources/config/ && \
-    cp course_config.properties.example course_config.properties && \
-    cp db_config.properties.example db_config.properties && \
-    cp gitlab_config.properties.example gitlab_config.properties && \
-    cp jenkins_config.properties.example jenkins_config.properties && \
-    cd /workdir && mvn -T 1C clean package -DskipTests
+RUN mvn -T 1C clean package -DskipTests
 
 FROM tomcat
 
